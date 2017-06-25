@@ -11,6 +11,6 @@ chown --recursive gradle:gradle /home/gradle
 ENV GRADLE_HOME /opt/gradle
 ENV GRADLE_USER_HOME /home/gradle
 
-COPY ./install.sh /tmp
+COPY gradleWrapper /tmp
 
-RUN /tmp/install.sh
+RUN sh /tmp/gradlew
